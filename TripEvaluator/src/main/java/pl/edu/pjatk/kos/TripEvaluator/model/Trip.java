@@ -7,14 +7,14 @@ import java.util.List;
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String subject;
     private String destination;
-    private Integer cost;
+    private Long cost;
     @OneToMany
     private List<Review> review;
 
-    public Trip(Integer id, String subject, String destination, Integer cost, List<Review> review) {
+    public Trip(Long id, String subject, String destination, Long cost, List<Review> review) {
         this.id = id;
         this.subject = subject;
         this.destination = destination;
@@ -25,11 +25,11 @@ public class Trip {
     public Trip() {
     }
 
-    public Integer getId() {
+    public Long  getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -49,11 +49,11 @@ public class Trip {
         this.destination = destination;
     }
 
-    public Integer getCost() {
+    public Long getCost() {
         return cost;
     }
 
-    public void setCost(Integer cost) {
+    public void setCost(Long cost) {
         this.cost = cost;
     }
 

@@ -10,7 +10,7 @@ public class Review {
     private Integer id;
     private String content;
     private LocalDateTime date;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Author author;
 
     public Review(Integer id, String content, LocalDateTime date, Author author) {
